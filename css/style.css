@@ -429,11 +429,16 @@ a, button{
 
 /* Header */
 .logo{
+
+}
+
+.footer .logo {
 	display: inline-block;
 	vertical-align: middle;
 }
 
 .header .logo {
+	float: left;
 	width: 12%;
 }
 
@@ -447,8 +452,9 @@ a, button{
 }
 
 .menu{
-	display: inline-block;
-	vertical-align: middle;
+	float: right;
+	/*display: inline-block;
+	vertical-align: middle;*/
 	width: 88%;
 	text-align: right;
 }
@@ -503,6 +509,32 @@ a, button{
 .menu__link.active:after {
 	width: 100%;
 }
+
+/* for responsive menu*/
+#show_menu {
+  float: right;
+  display: none;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  background-color: #ff6033;
+}
+ 
+#show_menu:focus {
+  outline: none;
+}
+/*end for responsive menu**/
 
 .first-slide-content {
 	padding-top: 352px;
@@ -644,6 +676,7 @@ a, button{
 	position: absolute;
   	bottom: 0;
   	left: 0;
+  	right: 0;
   	padding: 50px 20px 20px 20px;
   	text-align: left;
     background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
@@ -819,6 +852,10 @@ a, button{
 }
 
 @media (max-width: 960px) {
+	.header{
+		padding-top: 24px;
+	}
+
 	.info__title {
 		margin-bottom: 10px;
 		font-size: 60px;
@@ -906,6 +943,138 @@ a, button{
 }
 
 @media (max-width: 768px) {
+	.header{
+		position: relative;
+		padding-top: 10px;
+	}
+
+	.header .logo{
+		width: 25%;
+	}
+
+	/* Responsive menu*/
+	.my-hamburger span {
+		display: block;
+		position: absolute;
+		top: 22px;
+		left: 9px;
+		right: 9px;
+		height: 4px;
+		background: white;
+	}
+
+	.my-hamburger span::before,
+	.my-hamburger span::after {
+		position: absolute;
+		display: block;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background-color: #fff;
+		content: "";
+	}
+
+	.my-hamburger span::before {
+		top: -10px;
+	}
+
+	.my-hamburger span::after {
+		bottom: -10px;
+	}
+
+	.my-hamburger {
+		background-color: #ff6033;
+	}
+
+	.my-hamburger span {
+		transition: background 0s 0.3s;
+	}
+
+	.my-hamburger span::before,
+	.my-hamburger span::after {
+		transition-duration: 0.3s, 0.3s;
+		transition-delay: 0.3s, 0s;
+	}
+
+	.my-hamburger span::before {
+		transition-property: top, transform;
+	}
+
+	.my-hamburger span::after {
+		transition-property: bottom, transform;
+	}
+
+	/* состояние OPEN при открытом меню  */
+	.my-hamburger.open {
+		background-color: #df3708;
+	}
+
+	.my-hamburger.open span {
+		background: none;
+	}
+
+	.my-hamburger.open span::before {
+		top: 0;
+		transform: rotate(45deg);
+	}
+
+	.my-hamburger.open span::after {
+		bottom: 0;
+		transform: rotate(-45deg);
+	}
+
+	.my-hamburger.open span::before,
+	.my-hamburger.open span::after {
+		transition-delay: 0s, 0.3s;
+	}
+
+	#show_menu {
+		display: block;
+	}
+
+	.menu {
+		transform: translateY(-130%);
+		position: absolute;
+		top: 58px;
+		display: block;
+		width: 50%;
+		right: 15px;
+		z-index: -1;
+		background: rgba(255,255,255, 0.7);
+		transition: transform 0.5s ease;
+		text-align: center;
+	}
+
+	.menu__item {
+		display: block;
+		border-bottom: 1px solid rgba(0,0,0,0.6);	
+	}
+
+	.menu__item:last-child {
+		border-bottom: none;
+	}
+
+
+	.menu__link {
+		font-size: 14px;	
+	}
+
+	.menu__link:hover:after,
+	/*.menu__link:focus:after*/{
+		width: 0%;
+	}
+
+	.menu__link.active:after {
+		width: 0%;
+	}
+
+	#show_menu.open + .menu {
+		transform: translateY(0%);
+		z-index: 1;
+	}
+
+
+
 	.col-3-md {
 		width: 25%;
 	}
@@ -947,7 +1116,7 @@ a, button{
 	}
 
 	.first-slide-content {
-		padding-top: 20px;
+		padding-top: 70px;
 		padding-bottom: 20px;
 		max-width: 60%;
 	}
@@ -1022,6 +1191,10 @@ a, button{
 	.btn {
     margin-top: 15px;
     font-size: 16px;
+	}
+
+	.wrapper-img {
+  display: inline-block;
 	}
 
 	.slide-contact .info__text--padd {
@@ -1101,13 +1274,22 @@ a, button{
 		margin-left: 8.3333%;
 	}
 
+	.header .logo{
+		width: 40%;
+	}
+
+	.menu {
+		left: 15px;
+		right: 15px;
+		width: auto;
+	}
+
 	.first-slide {
 		background: #f9f8fb;
 		text-align: center;
 	}
 
 	.first-slide-content {
-		padding-top: 10px;
 		padding-bottom: 10px;
 		max-width: 100%;
 	}
@@ -1138,13 +1320,9 @@ a, button{
 		margin-top: 5px;
 	}
 
-	.btn--green {
-		margin-top: 10px;
-		width: 100%;
-	}
-
 	.btn {
     margin-top: 10px;
+    width: 100%;
 	}
 
 	.slide-services__btn{

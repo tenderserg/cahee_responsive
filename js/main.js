@@ -52,5 +52,33 @@ $(window).scroll(function() {
 });
 
 
+// == For responsive MENU == 
+
+$('#show_menu').on('click', function () {	
+	 if ($(this).hasClass('open') ) {
+	 		$(this).removeClass('open');
+	 		// $(this).find('span')
+	 		// 			 .removeClass('icon-cross')
+	 		// 			 .addClass('icon-menu');
+	 }
+	 else{
+	 		$(this).addClass('open');
+	 		// $(this).find('span')
+	 		// 			 .removeClass('icon-menu')
+	 		// 			 .addClass('icon-cross');
+	 }
+});
+
+$(window).resize(function(){
+	if ($(window).width() > 768) {
+		if ($('#show_menu').removeClass('open')) {
+			$('#show_menu').removeClass('open');
+			// $('#show_menu').find('span')
+			// 							 .removeClass('icon-cross')
+			// 							 .addClass('icon-menu');
+		}
+	}	
+});
+
 
 
