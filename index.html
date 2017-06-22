@@ -7,7 +7,8 @@
 	<title>Cahee</title>
 	<link rel="icon" href="favicon.png"/>
 	<link rel="stylesheet" href="css/normalize.css" />
-	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/style.css" />
 
 <!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -19,15 +20,15 @@
 	 	
 	 	<header class="header">
 	 		<div class="container">
-	 			<a class="logo" href="#">
-	 				<img src="Img/logo.png" alt="logo">
+	 			<a class="logo" href="#home">
+	 				<img src="img/logo.png" alt="logo">
 	 			</a>
 				
 	 			<button id="show_menu" class="my-hamburger">
 	 				<span>toggle menu</span>
 	 			</button>
 
-	 			<nav class="menu">
+	 			<nav id="main-menu" class="menu animation">
 	 				<ul class="menu__list">
 	 					<li class="menu__item"><a class="menu__link active" href="#home">HOME</a></li>
      					<li class="menu__item"><a class="menu__link " href="#about_us">ABOUT</a></li>
@@ -43,14 +44,14 @@
 		<div class="container">
 			<div class="first-slide-content">
 				<div class="info">
-	 	   			<h3 class="info__title title--w800">Fresh Life</h3>
-    				<p class="info__text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> 		
+	 	   			<h3 class="info__title title--w800 wow bounceInDown" data-wow-duration="2s" data-wow-offset="140"">Fresh Life</h3>
+    				<p class="info__text wow fadeIn" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="140"">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> 		
 	 			</div>
 	 			<button class="btn btn--orange">GET FREE NOW</button>
 			</div>
 
 			<a href="#about_us" class="first-slide__next-link">
-				<img src="Img/scroll.png" alt="scroll"/>
+				<img src="img/scroll.png" alt="scroll"/>
 			</a>
 	 	</div><!-- /.container -->
 	 </section><!-- /.first-slide -->
@@ -59,11 +60,11 @@
 		<section id="about_us" class="slide-about-us">
 			<div class="container">
 				<div class="row">
-					<div class="col-6">
+					<div class="col-6 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="140">
 						<img src="Img/about2.png" alt="about-us">
 					</div>
 
-					<div class="col-6 col-10-md col-offset-1-md col-12-sm col-offset-0-sm slide-about-us__content">
+					<div class="col-6 col-10-md col-offset-1-md col-12-sm col-offset-0-sm slide-about-us__content wow fadeInRight" data-wow-duration="2s" data-wow-offset="140">
 						<div class="info info--white">
 		 	   				<h3 class="info__title">About Us</h3>
 	    					<p class="info__text">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
@@ -94,12 +95,11 @@
 		 	</div> <!-- /.container -->
 		</section> <!-- /.slide-services -->
 
-
 		<section id="gallery" class="slide-gallery">
 			<div class="container">
 				<div class="row">				
 					<div class="col-6 col-offset-3 col-10-md col-offset-1-md col-12-sm col-offset-0-sm">
-						<div class="info">
+						<div class="info  wow fadeInUp" data-wow-duration="2s" data-wow-offset="140">
 		 	   				<h3 class="info__title title--margin30">Gallery</h3>
 	    					<p class="info__text info__text--padd">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>    		
 		 				</div>
@@ -107,7 +107,7 @@
 				</div>		
 
 				<div class="row">				
-					<div class="col-8 col-10-md col-offset-1-md col-12-sm col-offset-0-sm" >
+					<div class="col-8 col-10-md col-offset-1-md col-12-sm col-offset-0-sm  wow fadeInLeft" data-wow-duration="2s" data-wow-offset="140">
 						<div class="wrapper-img">
 							<img class="img--shadow" src="Img/gallery1.png" alt="gallery2-img">
 							<div class="wrapper-img__overlay"></div>
@@ -116,7 +116,7 @@
 
 					<div class="col-4 col-10-md col-offset-1-md col-12-sm col-offset-0-sm">
 						<div class="row">
-							<div class="col-12 col-10-md col-offset-1-md col-12-sm col-offset-0-sm">
+							<div class="col-12 col-10-md col-offset-1-md col-12-sm col-offset-0-sm  wow fadeInDown" data-wow-duration="2s" data-wow-offset="140">
 								<div class="wrapper-img">
 									<img class="img--shadow" src="Img/gallery2.png" alt="gallery2-img">
 									<div class="wrapper-img__overlay"></div>
@@ -124,7 +124,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-12 col-10-md col-offset-1-md col-12-sm col-offset-0-sm">
+							<div class="col-12 col-10-md col-offset-1-md col-12-sm col-offset-0-sm  wow fadeInUp" data-wow-duration="2s" data-wow-offset="140">
 								<div class="wrapper-img">
 									<img class="img--shadow" src="Img/gallery3.png" alt="gallery2-img">
 									<div class="wrapper-img__overlay"></div>
@@ -134,7 +134,7 @@
 					</div>				
 				</div>
 
-				<div class="row">				
+				<div class="row  wow fadeInUp" data-wow-duration="2s" data-wow-offset="140">				
 					<div class="col-6 col-10-md col-offset-1-md col-12-sm col-offset-0-sm">
 						<div class="wrapper-img">
 							<img class="img--shadow" src="Img/gallery4.png" alt="gallery2-img">
@@ -186,7 +186,7 @@
 			<div class="container">
 				<div class="row">				
 					<div class="col-6 col-offset-3 col-10-md col-offset-1-md col-12-sm col-offset-0-sm">
-						<div class="info">
+						<div class="info wow fadeInUp" data-wow-duration="2s" data-wow-offset="140">
 		 	   				<h3 class="info__title title--margin30">Blog</h3>
 	    					<p class="info__text info__text--padd">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>    		
 		 				</div>
@@ -194,7 +194,7 @@
 				</div>
 
 				<div class="row">				
-					<div class="col-4 col-10-md col-offset-1-md col-12-sm col-offset-0-sm">
+					<div class="col-4 col-10-md col-offset-1-md col-12-sm col-offset-0-sm wow fadeInUp" data-wow-duration="2s" data-wow-offset="140">
 						<div class="wrapper-img">
 							<img class="img--shadow" src="Img/Blog1.png" alt="Blog1-img">
 							<div class="date">
@@ -207,7 +207,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-4 col-10-md col-offset-1-md col-12-sm col-offset-0-sm">
+					<div class="col-4 col-10-md col-offset-1-md col-12-sm col-offset-0-sm wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="140"">
 						<div class="wrapper-img">
 							<img class="img--shadow" src="Img/Blog2.png" alt="Blog2-img">
 							<div class="date">
@@ -220,7 +220,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-4 col-10-md col-offset-1-md col-12-sm col-offset-0-sm">
+					<div class="col-4 col-10-md col-offset-1-md col-12-sm col-offset-0-sm wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="140"">
 						<div class="wrapper-img">
 							<img class="img--shadow" src="Img/Blog3.png" alt="Blog3-img">
 							<div class="date">
@@ -242,7 +242,7 @@
 			<div class="container">
 				<div class="row">				
 					<div class="col-4 col-offset-4 col-10-md col-offset-1-md col-12-sm col-offset-0-sm">
-						<div class="info">
+						<div class="info wow fadeInUp" data-wow-duration="2s" data-wow-offset="140">
 		 	   				<h3 class="info__title title--margin30">Contact</h3>
 	    					<p class="info__text info__text--padd">For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>    		
 		 				</div>
@@ -250,7 +250,7 @@
 				</div>
 				
 				<div class="row">				
-					<div class="col-6 col-8-md col-12-sm">
+					<div class="col-6 col-8-md col-12-sm wow fadeInLeft" data-wow-duration="2s" data-wow-offset="140"">
 						<form class="form-contact" name="contact" id="get_contact" action="contact.php">
 							<input class="input input--contact" required id="adress" type="text" name="address" placeholder="Your adress..." value="">
 							<input class="input input--contact" required id="contact_email" type="email" name="contact_email" placeholder="Your email..." value="">
@@ -259,7 +259,7 @@
 							<button class="btn btn--orange" type="submit">Send</button>
 						</form>	
 					</div>
-					<div class="col-6 col-4-md col-12-sm">
+					<div class="col-6 col-4-md col-12-sm wow fadeInRight" data-wow-duration="2s" data-wow-offset="140"">
 						<div class="contact-details">
 							<p class="contact-details__title">address</p>
 							<p class="contact-details__link">123 City name, Street, City, Country</p>
@@ -278,7 +278,7 @@
 	<footer class="footer">
 		<div class="container">
 			<p class="footer__copyright">&copy; 2015 Company. All right reserved.</p>
-			<a class="logo" href="#">
+			<a class="logo" href="#home">
 				<img src="Img/logo-small.png" alt="logo-small">
 			</a>	
 			<p class="footer__made">Made with <span>love</span> by Auskteez</p>
@@ -288,6 +288,10 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/main.min.js"></script>
+	<!-- Плагин для мягкой прокрутки скролом сайта -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
+	<!-- Плагин для Анимации совместно с Animate.css -->
+	<script src="js/wow.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

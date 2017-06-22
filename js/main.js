@@ -2,6 +2,8 @@
     
 // })(jQwery);
 
+var $topMenu = $('#main-menu');
+
 $(document).ready(function() {
 
 	//Плавная прокрутка к определённой секции по клику на меню навигации
@@ -16,7 +18,30 @@ $(document).ready(function() {
 		
 		$('.menu__link.active').removeClass('active');
 	  $(this).addClass('active');
+	  if ($('#show_menu').hasClass('open')) {
+			$('#show_menu').removeClass('open');
+			$topMenu.removeClass('open');
+		}
 	});
+
+	//Плавная прокрутка при клике на лого 
+	$('.logo').on('click', function (event) {
+		event.preventDefault();
+		var link = $(this).attr('href');
+		var distance = $(link).offset().top;
+
+		$('html, body').animate({
+			scrollTop: distance
+		}, 800);
+		
+		// $('.menu__link.active').removeClass('active');
+	 //  $(this).addClass('active');
+	  if ($('#show_menu').hasClass('open')) {
+			$('#show_menu').removeClass('open');
+			$topMenu.removeClass('open');
+		}
+	});
+
 	// Конец Плавная прокрутка
 
 });
@@ -53,32 +78,31 @@ $(window).scroll(function() {
 
 
 // == For responsive MENU == 
-
 $('#show_menu').on('click', function () {	
-	 if ($(this).hasClass('open') ) {
+	 if ($topMenu.hasClass('open') ) {
+	 		$topMenu.removeClass('open');
 	 		$(this).removeClass('open');
-	 		// $(this).find('span')
-	 		// 			 .removeClass('icon-cross')
-	 		// 			 .addClass('icon-menu');
 	 }
 	 else{
+	 		$topMenu.addClass('open');
 	 		$(this).addClass('open');
-	 		// $(this).find('span')
-	 		// 			 .removeClass('icon-menu')
-	 		// 			 .addClass('icon-cross');
 	 }
 });
 
 $(window).resize(function(){
 	if ($(window).width() > 768) {
-		if ($('#show_menu').removeClass('open')) {
-			$('#show_menu').removeClass('open');
-			// $('#show_menu').find('span')
-			// 							 .removeClass('icon-cross')
-			// 							 .addClass('icon-menu');
-		}
-	}	
+		$topMenu.removeClass('animation')
+			      .removeClass('open');
+		$('#show_menu').removeClass('open');
+	}
+	else {
+		$topMenu.addClass('animation');
+	}
+
 });
+
+// Анимация с WOW. Инициализация плагина.
+new WOW().init();
 
 
 
