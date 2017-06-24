@@ -25,7 +25,7 @@ $(document).ready(function() {
 	});
 
 	//Плавная прокрутка при клике на лого 
-	$('.logo').on('click', function (event) {
+	$('.logo, .first-slide__next-link').on('click', function (event) {
 		event.preventDefault();
 		var link = $(this).attr('href');
 		var distance = $(link).offset().top;
@@ -41,8 +41,13 @@ $(document).ready(function() {
 			$topMenu.removeClass('open');
 		}
 	});
-
 	// Конец Плавная прокрутка
+
+	
+	if ($(window).width() > 768) {
+		// Анимация с WOW. Инициализация плагина.
+		new WOW().init();
+	}
 
 });
 
@@ -70,7 +75,7 @@ $(window).scroll(function() {
 
 	var distAbout = $('#about_us').offset().top;
 	if ($(window).scrollTop() >= distAbout) {
-		$('.header').css('background', 'rgba(255,255,255,0.7)');
+		$('.header').css('background', 'rgba(255,255,255,0.85)');
 	} else {
 		$('.header').css('background', 'transparent');
 		}
@@ -94,6 +99,8 @@ $(window).resize(function(){
 		$topMenu.removeClass('animation')
 			      .removeClass('open');
 		$('#show_menu').removeClass('open');
+		// Анимация с WOW. Инициализация плагина.
+		new WOW().init();
 	}
 	else {
 		$topMenu.addClass('animation');
@@ -101,8 +108,6 @@ $(window).resize(function(){
 
 });
 
-// Анимация с WOW. Инициализация плагина.
-new WOW().init();
 
 
 

@@ -436,7 +436,6 @@ main{
 /* Header */
 .header .logo {
 	float: left;
-	width: 20%;
 }
 
 .header{
@@ -446,11 +445,12 @@ main{
 	left: 0;
 	top: 0;
 	z-index: 1;
+	background: transparent;
+	transition: background 0.5s ease;
 }
 
 .menu{
 	float: right;
-	width: 80%;
 	text-align: right;
 }
 
@@ -954,7 +954,7 @@ main{
 		min-height: 0;
 	}
 	.first-slide-content {
-		padding-top: 100px;
+		padding-top: 150px;
 		padding-bottom: 100px;
 		max-width: 40%;
 	}
@@ -1028,10 +1028,6 @@ main{
 		padding-top: 10px;
 	}
 
-	.header .logo{
-		width: 50%;
-	}
-
 	#show_menu {
 		position: relative;
 		z-index: 1;
@@ -1048,7 +1044,7 @@ main{
 		top: 62px;
 		width: 50%;
 		right: 15px;
-		background: rgba(255,255,255, 0.7);
+		background: rgba(255,255,255, 0.85);
 		text-align: center;			
 	}
 
@@ -1067,7 +1063,7 @@ main{
 		border-bottom: 1px solid rgba(0,0,0,0.6);	
 	}
 
-	.menu__item:last-child {
+	.menu__item:last-child{
 		border-bottom: none;
 	}
 
@@ -1087,6 +1083,10 @@ main{
 
 	.col-4-md {
 		width: 33.3333%;
+	}
+
+	.col-5-md{
+		width: 41.6665%;
 	}
 
 	.col-6-md{
@@ -1122,14 +1122,18 @@ main{
 	}
 
 	.first-slide-content {
-		padding-top: 70px;
+		padding-top: 110px;
 		padding-bottom: 20px;
-		max-width: 60%;
+		max-width: 50%;
 	}
 
 	.info__title {
 		margin-bottom: 10px;
-		font-size: 40px;
+		font-size: 35px;
+	}
+
+	.slide-about-us {
+		text-align: center;
 	}
 
 	.slide-about-us img {
@@ -1199,6 +1203,10 @@ main{
 		font-size: 16px;
 	}
 
+	.slide-gallery img{
+		max-width: 370px;
+	}
+
 	.wrapper-img {
 		display: inline-block;
 	}
@@ -1260,6 +1268,10 @@ main{
 		font-size: 14px;
 	}
 
+	.col-6-sm {
+		width: 50%;
+	}
+
 	.col-10-sm {
 		width: 83.3333%;
 	}
@@ -1285,40 +1297,34 @@ main{
     width: 100%;
 	}
 
-	.first-slide {
-		background: #f9f8fb;
-		text-align: center;
-	}
-
 	.first-slide-content {
-		padding-bottom: 10px;
-		max-width: 100%;
+		padding-bottom: 25px;
 	}
 
 	.info__title {
 		margin-bottom: 5px;
-		font-size: 20px;
+		font-size: 30px;
 	}
 
 	.slide-services .info__title{
-		font-size: 20px;
+		font-size: 30px;
 	}
 
 	.slide-about-us .info__title {
-		font-size: 20px;
+		font-size: 30px;
 	}
 
 	.slide-about-us, .slide-gallery,
 	.slide-subscribe,	.slide-blog, .slide-contact {
-		padding: 10px 0;
+		padding: 25px 0;
 	}
 
 	.slide-services {
-		padding: 40px 0 10px;
+		padding: 65px 0 25px;
 	}
 
 	.slide-services__btn + .slide-services__btn {
-		margin-top: 5px;
+		margin-top: 10px;
 	}
 
 	.btn {
@@ -1332,7 +1338,7 @@ main{
 	}
 
 	.info--center-right {
-		top: 10px;
+		top: 25px;
 	}
 
 	.form-contact {
