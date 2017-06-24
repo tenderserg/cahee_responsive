@@ -1162,6 +1162,7 @@ main{
 		-o-transform: translateX(-50%);
 		transform: translateX(-50%);
 		display: block;
+		width: 100%;
 	}
 
 	.slide-services__wpap-img {
@@ -1205,6 +1206,7 @@ main{
 
 	.slide-gallery img{
 		max-width: 370px;
+		width: 100%
 	}
 
 	.wrapper-img {
